@@ -386,15 +386,17 @@ export default function LeadForm({
           disabled={isLoading}
           className="w-full relative group overflow-hidden py-3.5 px-6 rounded-xl font-bold text-white text-base bg-[#00B86B] hover:bg-[#00A35E] active:scale-[0.99] transition-all shadow-md hover:shadow-lg disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer flex items-center justify-center gap-2"
         >
+          {/* Subtle Sheen Sweep */}
+          <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:translate-x-full transition-transform duration-700 ease-in-out pointer-events-none" />
           {isLoading ? (
             <>
-              <Loader2 className="w-5 h-5 animate-spin" />
-              <span>Processing...</span>
+              <Loader2 className="w-5 h-5 animate-spin relative z-10" />
+              <span className="relative z-10">Processing...</span>
             </>
           ) : (
             <>
-              <span>{buttonText}</span>
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              <span className="relative z-10">{buttonText}</span>
+              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1 relative z-10" />
             </>
           )}
         </button>

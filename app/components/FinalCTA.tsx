@@ -58,10 +58,12 @@ export default function FinalCTA() {
             <button
               type="button"
               onClick={() => openModal()}
-              className="w-full sm:w-auto px-8 py-4 rounded-xl font-bold text-sm sm:text-base text-white bg-[#00B86B] hover:bg-[#00A35E] active:scale-95 transition-all shadow-md hover:shadow-lg cursor-pointer flex items-center justify-center gap-2 group"
+              className="relative overflow-hidden w-full sm:w-auto px-8 py-4 rounded-xl font-bold text-sm sm:text-base text-white bg-[#00B86B] hover:bg-[#00A35E] active:scale-95 transition-all shadow-md hover:shadow-lg cursor-pointer flex items-center justify-center gap-2 group"
             >
-              <span>Enquire Now</span>
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              {/* Subtle Sheen Sweep */}
+              <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:translate-x-full transition-transform duration-700 ease-in-out pointer-events-none" />
+              <span className="relative z-10">Enquire Now</span>
+              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1 relative z-10" />
             </button>
           </div>
 

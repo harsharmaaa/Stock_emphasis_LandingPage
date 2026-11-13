@@ -22,9 +22,12 @@ export default function HeroSection() {
           {/* Left Column — Company Introduction & Desktop Research Desk Image */}
           <div className="lg:col-span-7 flex flex-col justify-between lg:pr-4 h-full">
             <div className="space-y-6">
-              {/* SEBI Compliance Badge */}
+              {/* SEBI Compliance Badge with Active Breathing Pulse */}
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#E2E8F0] text-xs sm:text-sm font-semibold text-[#0B2240] shadow-xs">
-                <span className="w-2 h-2 rounded-full bg-[#00B86B] animate-pulse" />
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00B86B] opacity-75" />
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-[#00B86B]" />
+                </span>
                 <span>SEBI Regd. Research Analyst • Reg. No. INH000020022</span>
               </div>
 

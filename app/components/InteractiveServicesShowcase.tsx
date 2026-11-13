@@ -19,6 +19,7 @@ import {
   Combine,
   type LucideIcon,
 } from "lucide-react";
+import { motion } from "framer-motion";
 import { useModal } from "../context/ModalContext";
 
 export interface ServiceDetail {
@@ -254,30 +255,46 @@ export default function InteractiveServicesShowcase() {
 
         {/* Category Tabs */}
         <div className="flex items-center justify-center mb-12">
-          <div className="inline-flex p-1.5 rounded-2xl bg-slate-100 border border-slate-200 shadow-xs max-w-full overflow-x-auto">
-            {CATEGORIES.map((cat) => (
-              <button
-                key={cat}
-                type="button"
-                onClick={() => setActiveTab(cat)}
-                className={`px-5 sm:px-7 py-2.5 sm:py-3 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer whitespace-nowrap ${
-                  activeTab === cat
-                    ? "bg-[#0B2240] text-white shadow-sm"
-                    : "text-slate-600 hover:text-[#0B2240] hover:bg-slate-200/60"
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
+          <div className="inline-flex p-1.5 rounded-2xl bg-slate-100 border border-slate-200 shadow-xs max-w-full overflow-x-auto relative">
+            {CATEGORIES.map((cat) => {
+              const isActive = activeTab === cat;
+              return (
+                <button
+                  key={cat}
+                  type="button"
+                  onClick={() => setActiveTab(cat)}
+                  className={`relative px-5 sm:px-7 py-2.5 sm:py-3 rounded-xl text-xs sm:text-sm font-bold transition-colors cursor-pointer whitespace-nowrap z-10 ${
+                    isActive
+                      ? "text-white"
+                      : "text-slate-600 hover:text-[#0B2240]"
+                  }`}
+                >
+                  {isActive && (
+                    <motion.div
+                      layoutId="activeCategoryPill"
+                      className="absolute inset-0 bg-[#0B2240] rounded-xl shadow-sm -z-10"
+                      transition={{ type: "spring", stiffness: 450, damping: 35 }}
+                    />
+                  )}
+                  <span>{cat}</span>
+                </button>
+              );
+            })}
           </div>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        {/* Services Grid with Subtle Cross-Fade */}
+        <motion.div
+          key={activeTab}
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.22, ease: "easeOut" }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
+        >
           {filteredServices.map((service) => (
             <div
               key={service.id}
-              className="relative flex flex-col bg-[#F8FAFC] rounded-2xl md:rounded-3xl border border-slate-200 hover:border-[#0B2240]/40 transition-all duration-300 shadow-xs hover:shadow-lg group overflow-hidden"
+              className="relative flex flex-col bg-[#F8FAFC] rounded-2xl md:rounded-3xl border border-slate-200 hover:border-[#0B2240]/40 hover:-translate-y-1.5 hover:shadow-xl transition-all duration-200 shadow-xs group overflow-hidden"
             >
               {/* Top Accent line */}
               <div className="h-1.5 w-full bg-slate-200 group-hover:bg-[#00B86B] transition-colors" />
@@ -346,7 +363,7 @@ export default function InteractiveServicesShowcase() {
               </div>
             </div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Regulatory note */}
         <div className="mt-12 p-4 rounded-xl bg-[#F8FAFC] border border-slate-200 text-center max-w-3xl mx-auto shadow-2xs">
