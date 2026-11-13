@@ -45,7 +45,7 @@ export default function AboutSection() {
               <div className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-[#00B86B] shrink-0 mt-0.5" />
                 <p className="text-xs sm:text-sm text-slate-700 font-medium">
-                  <strong>Indore Research Presence:</strong> Headquartered at Lakeview 1, Scheme No. 94, Indore, upholding SEBI research analyst standards.
+                  <strong>Indore Research Presence:</strong>  Shekhar Central, INDORE, MADHYA PRADESH
                 </p>
               </div>
             </div>

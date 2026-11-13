@@ -91,7 +91,7 @@ export default function Footer() {
                       Registered Office
                     </span>
                     <span className="leading-relaxed text-slate-200">
-                      25 FA, Scheme No 94, Sector F, 201-202, Lakeview 1, Indore, M.P.
+                      404, 4th Floor, Shekhar Central, INDORE, MADHYA PRADESH, 452001
                     </span>
                   </div>
                 </div>

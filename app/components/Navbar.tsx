@@ -28,7 +28,7 @@ export default function Navbar() {
           </div>
 
           <div className="text-slate-500 font-medium hidden sm:block">
-            Registered Address: 25 FA, Scheme No. 94, Sector F, Lakeview 1, Indore, M.P.
+            404, 4th Floor, Shekhar Central, INDORE, MADHYA PRADESH, 452001
           </div>
         </div>
       </div>
