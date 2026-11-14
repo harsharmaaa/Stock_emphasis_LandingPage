@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { ShieldCheck, LineChart, Headphones, Sparkles } from "lucide-react";
+import { ShieldCheck, Target, Filter, Sparkles } from "lucide-react";
 import LeadForm from "./LeadForm";
 
 export default function HeroSection() {
@@ -32,27 +32,26 @@ export default function HeroSection() {
               </div>
 
               {/* Main Heading */}
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-black tracking-tight leading-[1.15] text-[#0B2240]">
-                Your Reliable{" "}
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[50px] font-black tracking-tight leading-[1.15] text-[#0B2240]">
+                Intraday Research for{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0B2240] via-[#103E70] to-[#00B86B]">
-                  Stock Market Research
-                </span>{" "}
-                Partner
+                  Active Market Participants
+                </span>
               </h1>
 
-              {/* Tagline */}
+              {/* Sub-headline */}
               <p className="text-base sm:text-lg font-bold text-[#0B2240] tracking-wide">
-                Insights | Data-Driven Strategies | Smart Investments
+                Structured Research Calls for Nifty, Bank Nifty, Sensex &amp; Liquid Stocks
               </p>
 
-              {/* Description */}
+              {/* Short Description */}
               <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl">
-                Explore research-based stock market services designed to support informed investment decisions.
+                Get research-backed intraday setups across Cash, Futures &amp; Options with clearly defined Entry, Stop Loss, and Target levels.
               </p>
 
               {/* Trust Indicators */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 pt-1 max-w-2xl">
-                <div className="flex items-center gap-3 p-3.5 rounded-xl bg-white border border-[#E2E8F0] shadow-xs">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 pt-1 max-w-2xl items-stretch">
+                <div className="flex items-center gap-3 p-3.5 rounded-xl bg-white border border-[#E2E8F0] shadow-xs h-full">
                   <div className="w-10 h-10 rounded-lg bg-[#F8FAFC] text-[#00B86B] flex items-center justify-center shrink-0 border border-[#E2E8F0]">
                     <ShieldCheck className="w-5 h-5" />
                   </div>
@@ -61,35 +60,35 @@ export default function HeroSection() {
                       Regulated
                     </h4>
                     <p className="text-xs sm:text-sm font-bold text-[#0B2240] leading-tight">
-                      SEBI Registered Research Analyst
+                      SEBI Registered Desk • INH000020022
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-3 p-3.5 rounded-xl bg-white border border-[#E2E8F0] shadow-xs">
+                <div className="flex items-center gap-3 p-3.5 rounded-xl bg-white border border-[#E2E8F0] shadow-xs h-full">
                   <div className="w-10 h-10 rounded-lg bg-[#F8FAFC] text-[#0B2240] flex items-center justify-center shrink-0 border border-[#E2E8F0]">
-                    <LineChart className="w-5 h-5" />
+                    <Target className="w-5 h-5 text-[#00B86B]" />
                   </div>
                   <div>
                     <h4 className="text-[10px] uppercase tracking-wider text-slate-400 font-bold">
-                      Analysis
+                      Discipline
                     </h4>
                     <p className="text-xs sm:text-sm font-bold text-[#0B2240] leading-tight">
-                      Research-Driven Approach
+                      Defined Entry, Target &amp; Stop Loss
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-3 p-3.5 rounded-xl bg-white border border-[#E2E8F0] shadow-xs">
+                <div className="flex items-center gap-3 p-3.5 rounded-xl bg-white border border-[#E2E8F0] shadow-xs h-full">
                   <div className="w-10 h-10 rounded-lg bg-[#F8FAFC] text-[#00B86B] flex items-center justify-center shrink-0 border border-[#E2E8F0]">
-                    <Headphones className="w-5 h-5" />
+                    <Filter className="w-5 h-5" />
                   </div>
                   <div>
                     <h4 className="text-[10px] uppercase tracking-wider text-slate-400 font-bold">
-                      Support
+                      Quality
                     </h4>
                     <p className="text-xs sm:text-sm font-bold text-[#0B2240] leading-tight">
-                      Dedicated Client Support
+                      Opportunity-Based Research Alerts
                     </p>
                   </div>
                 </div>

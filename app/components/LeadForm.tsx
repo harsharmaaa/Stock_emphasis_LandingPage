@@ -201,8 +201,10 @@ export default function LeadForm({
     );
   }
 
+  const isModal = source === "modal";
+
   return (
-    <form onSubmit={handleSubmit} noValidate className="space-y-4">
+    <form onSubmit={handleSubmit} noValidate className={isModal ? "space-y-2 sm:space-y-2.5" : "space-y-4"}>
       {serverError && (
         <div
           role="alert"
@@ -220,7 +222,9 @@ export default function LeadForm({
       <div>
         <label
           htmlFor={`${formIdPrefix}-name`}
-          className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1.5"
+          className={`block font-semibold text-slate-700 uppercase tracking-wider ${
+            isModal ? "text-[10px] sm:text-xs mb-1" : "text-xs mb-1.5"
+          }`}
         >
           Full Name <span className="text-red-500">*</span>
         </label>
@@ -248,7 +252,9 @@ export default function LeadForm({
           }}
           placeholder="e.g. Rahul Sharma"
           autoComplete="name"
-          className={`w-full px-3.5 py-2.5 md:py-3 rounded-xl border text-sm text-slate-900 bg-white placeholder:text-slate-400 focus:outline-none transition-all ${
+          className={`w-full px-3.5 rounded-xl border text-slate-900 bg-white placeholder:text-slate-400 focus:outline-none transition-all ${
+            isModal ? "py-2 text-xs sm:text-sm" : "py-2.5 md:py-3 text-sm"
+          } ${
             touched.name && errors.name
               ? "border-red-400 focus:ring-2 focus:ring-red-100"
               : "border-slate-300 focus:border-[#0B2240] focus:ring-2 focus:ring-[#0B2240]/10"
@@ -263,12 +269,18 @@ export default function LeadForm({
       <div>
         <label
           htmlFor={`${formIdPrefix}-mobile`}
-          className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1.5"
+          className={`block font-semibold text-slate-700 uppercase tracking-wider ${
+            isModal ? "text-[10px] sm:text-xs mb-1" : "text-xs mb-1.5"
+          }`}
         >
           Mobile Number <span className="text-red-500">*</span>
         </label>
         <div className="relative flex rounded-xl shadow-xs">
-          <div className="inline-flex items-center px-3 rounded-l-xl border border-r-0 border-slate-300 bg-slate-50 text-slate-600 font-medium text-sm select-none">
+          <div
+            className={`inline-flex items-center rounded-l-xl border border-r-0 border-slate-300 bg-slate-50 text-slate-600 font-medium select-none ${
+              isModal ? "px-2.5 text-xs sm:text-sm" : "px-3 text-sm"
+            }`}
+          >
             <span className="text-xs text-slate-400 mr-1.5">🇮🇳</span> +91
           </div>
           <input
@@ -291,7 +303,9 @@ export default function LeadForm({
             }}
             placeholder="10-digit mobile number"
             autoComplete="tel"
-            className={`w-full px-3.5 py-2.5 md:py-3 rounded-r-xl border text-sm text-slate-900 bg-white placeholder:text-slate-400 focus:outline-none transition-all ${
+            className={`w-full px-3.5 rounded-r-xl border text-slate-900 bg-white placeholder:text-slate-400 focus:outline-none transition-all ${
+              isModal ? "py-2 text-xs sm:text-sm" : "py-2.5 md:py-3 text-sm"
+            } ${
               touched.mobile && errors.mobile
                 ? "border-red-400 focus:ring-2 focus:ring-red-100"
                 : "border-slate-300 focus:border-[#0B2240] focus:ring-2 focus:ring-[#0B2240]/10"
@@ -307,7 +321,9 @@ export default function LeadForm({
       <div>
         <label
           htmlFor={`${formIdPrefix}-service`}
-          className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1.5"
+          className={`block font-semibold text-slate-700 uppercase tracking-wider ${
+            isModal ? "text-[10px] sm:text-xs mb-1" : "text-xs mb-1.5"
+          }`}
         >
           Interested Service <span className="text-red-500">*</span>
         </label>
@@ -331,7 +347,9 @@ export default function LeadForm({
                 }));
               }
             }}
-            className={`w-full px-3.5 py-2.5 md:py-3 rounded-xl border text-sm bg-white focus:outline-none transition-all appearance-none cursor-pointer ${
+            className={`w-full px-3.5 rounded-xl border bg-white focus:outline-none transition-all appearance-none cursor-pointer ${
+              isModal ? "py-2 text-xs sm:text-sm" : "py-2.5 md:py-3 text-sm"
+            } ${
               !service ? "text-slate-400" : "text-slate-900"
             } ${
               touched.service && errors.service
@@ -363,7 +381,9 @@ export default function LeadForm({
       <div>
         <label
           htmlFor={`${formIdPrefix}-capital`}
-          className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1.5"
+          className={`block font-semibold text-slate-700 uppercase tracking-wider ${
+            isModal ? "text-[10px] sm:text-xs mb-1" : "text-xs mb-1.5"
+          }`}
         >
           Trading Capital <span className="text-slate-400 text-[10px] font-normal lowercase">(optional)</span>
         </label>
@@ -373,7 +393,9 @@ export default function LeadForm({
             value={capital}
             disabled={isLoading}
             onChange={(e) => setCapital(e.target.value)}
-            className={`w-full px-3.5 py-2.5 md:py-3 rounded-xl border border-slate-300 text-sm bg-white focus:border-[#0B2240] focus:ring-2 focus:ring-[#0B2240]/10 focus:outline-none transition-all appearance-none cursor-pointer ${
+            className={`w-full px-3.5 rounded-xl border border-slate-300 bg-white focus:border-[#0B2240] focus:ring-2 focus:ring-[#0B2240]/10 focus:outline-none transition-all appearance-none cursor-pointer ${
+              isModal ? "py-2 text-xs sm:text-sm" : "py-2.5 md:py-3 text-sm"
+            } ${
               !capital ? "text-slate-400" : "text-slate-900"
             }`}
           >
@@ -393,17 +415,19 @@ export default function LeadForm({
       </div>
 
       {/* Submit Button */}
-      <div className="pt-2">
+      <div className={isModal ? "pt-1" : "pt-2"}>
         <button
           type="submit"
           disabled={isLoading}
-          className="w-full relative group overflow-hidden py-3.5 px-6 rounded-xl font-bold text-white text-base bg-[#00B86B] hover:bg-[#00A35E] active:scale-[0.99] transition-all shadow-md hover:shadow-lg disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer flex items-center justify-center gap-2"
+          className={`w-full relative group overflow-hidden rounded-xl font-bold text-white bg-[#00B86B] hover:bg-[#00A35E] active:scale-[0.99] transition-all shadow-md hover:shadow-lg disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer flex items-center justify-center gap-2 ${
+            isModal ? "py-2.5 px-5 text-sm" : "py-3.5 px-6 text-base"
+          }`}
         >
           {/* Subtle Sheen Sweep */}
           <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent group-hover:translate-x-full transition-transform duration-700 ease-in-out pointer-events-none" />
           {isLoading ? (
             <>
-              <Loader2 className="w-5 h-5 animate-spin relative z-10" />
+              <Loader2 className="w-4 h-4 sm:w-5 sm:h-5 animate-spin relative z-10" />
               <span className="relative z-10">Processing...</span>
             </>
           ) : (
@@ -416,7 +440,11 @@ export default function LeadForm({
       </div>
 
       {/* Privacy guarantee note */}
-      <p className="text-center text-[11px] text-slate-500 flex items-center justify-center gap-1.5 pt-1">
+      <p
+        className={`text-center text-slate-500 flex items-center justify-center gap-1.5 ${
+          isModal ? "text-[10px] sm:text-[11px] pt-0.5 sm:pt-1" : "text-[11px] pt-1"
+        }`}
+      >
         <ShieldCheck className="w-3.5 h-3.5 text-[#00B86B] shrink-0" />
         <span>Confidential enquiry • Handled by SEBI Registered Desk</span>
       </p>

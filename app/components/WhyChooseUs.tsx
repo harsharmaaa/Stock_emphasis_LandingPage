@@ -3,73 +3,56 @@
 import React from "react";
 import {
   ShieldCheck,
-  MessagesSquare,
-  Timer,
-  HeartHandshake,
-  LineChart,
-  Shield,
-  UserCheck,
-  Sparkles,
+  Target,
   Award,
+  Microscope,
+  Timer,
+  UserCheck,
 } from "lucide-react";
 import { motion } from "framer-motion";
 
 const WHY_CHOOSE_ITEMS = [
   {
     icon: ShieldCheck,
-    title: "SEBI Registered Research Analyst",
+    title: "SEBI Registered Desk",
     subtitle: "Regulatory Governance",
     description:
-      "Operates under registration number INH000020022 with adherence to ethical research analyst codes of conduct.",
+      "Operates under SEBI Reg. No. INH000020022 with strict compliance and zero guaranteed-return claims.",
   },
   {
-    icon: MessagesSquare,
-    title: "Free Counselling",
-    subtitle: "Orientation & Clarification",
+    icon: Target,
+    title: "Defined Risk Levels",
+    subtitle: "Capital Protection",
     description:
-      "Complimentary guidance sessions to help market participants understand service models and disciplined execution.",
+      "Every intraday setup includes a clear Entry range, Target, and mandatory Stop-Loss.",
+  },
+  {
+    icon: Award,
+    title: "Quality Over Quantity",
+    subtitle: "Selective Screening",
+    description:
+      "No forced daily quotas—alerts shared only when high-probability market setups emerge.",
+  },
+  {
+    icon: Microscope,
+    title: "In-House Research",
+    subtitle: "Analytical Rigor",
+    description:
+      "Technical, volume, and Open Interest (OI) analysis done internally by qualified analysts.",
   },
   {
     icon: Timer,
-    title: "Trades on Time",
-    subtitle: "Prompt Dispatches",
+    title: "Timely WhatsApp Alerts",
+    subtitle: "Rapid Dispatches",
     description:
-      "Swift alert transmissions via WhatsApp and phone alerts to allow timely response in fast-moving market sessions.",
-  },
-  {
-    icon: HeartHandshake,
-    title: "Friendly Interactions",
-    subtitle: "Courteous Communication",
-    description:
-      "Professional and transparent client engagement, ensuring every market query is addressed with patience and clarity.",
-  },
-  {
-    icon: LineChart,
-    title: "Robust Research Methodology",
-    subtitle: "Analytical Rigor",
-    description:
-      "Systematic integration of technical chart patterns, volume momentum, sector rotation, and balance sheet indicators.",
-  },
-  {
-    icon: Shield,
-    title: "Safe Stock Selection",
-    subtitle: "Capital Preservation Focus",
-    description:
-      "Focusing on high-liquidity, stable counters and disciplined stop-loss boundaries to mitigate downside market exposure.*",
+      "Fast, actionable dispatches across Nifty, Bank Nifty, Sensex & liquid stocks.",
   },
   {
     icon: UserCheck,
-    title: "Dedicated Relationship Manager",
-    subtitle: "Personal Point of Contact",
+    title: "Dedicated Desk Support",
+    subtitle: "Personal Relationship Desk",
     description:
-      "Assigned support specialists to coordinate research dispatches, schedule queries, and guide service workflows.",
-  },
-  {
-    icon: Sparkles,
-    title: "Unique Services",
-    subtitle: "Diverse Market Coverage",
-    description:
-      "Specialized offerings spanning Classic Cash, Massive derivatives combos, and Prime Index trades to suit varying trader profiles.",
+      "Personal relationship manager assistance with 100% execution in your own demat account.",
   },
 ];
 
@@ -108,17 +91,17 @@ export default function WhyChooseUs() {
           </h2>
 
           <p className="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed">
-            Eight foundational pillars published by Stock Emphasis that guide our client relationships and research delivery.
+            Six foundational pillars guiding our regulated research, risk management, and client dispatches.
           </p>
         </div>
 
-        {/* 8 Feature Boxes in Responsive Grid with Scroll Animations */}
+        {/* 6 Feature Boxes in Responsive 3x2 Grid with Scroll Animations */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-40px" }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
         >
           {WHY_CHOOSE_ITEMS.map((item, index) => {
             const Icon = item.icon;
@@ -158,7 +141,7 @@ export default function WhyChooseUs() {
                 </div>
 
                 <div className="pt-4 mt-5 border-t border-slate-200/70 flex items-center justify-between text-[10px] font-semibold text-slate-400 uppercase tracking-wider">
-                  <span>Pillar 0{index + 1} of 08</span>
+                  <span>Pillar 0{index + 1} of 06</span>
                   <span className="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-[#00B86B] transition-colors" />
                 </div>
               </motion.div>
@@ -166,10 +149,10 @@ export default function WhyChooseUs() {
           })}
         </motion.div>
 
-        {/* Regulatory disclaimer notice on Safe Stock Selection */}
+        {/* Regulatory disclaimer notice */}
         <div className="mt-12 p-4 rounded-xl bg-slate-50 border border-slate-200 text-center max-w-3xl mx-auto shadow-2xs">
           <p className="text-[11px] text-slate-500 leading-relaxed">
-            * <span className="font-semibold text-slate-700">Notice on &quot;Safe Stock Selection&quot;:</span> Stock Emphasis prioritizes liquid stocks with established risk containment; however, all securities investments are subject to market risks. Past performance and stock selection methodology do not assure profits or eliminate the risk of loss.
+            * <span className="font-semibold text-slate-700">Notice on Regulatory Compliance:</span> Stock Emphasis operates under SEBI Reg. No. INH000020022. All securities investments involve market risks. Past performance and analytical frameworks do not assure returns or eliminate risk of loss.
           </p>
         </div>
       </div>

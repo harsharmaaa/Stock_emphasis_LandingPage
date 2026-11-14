@@ -24,17 +24,17 @@ export default function FinalCTA() {
           {/* Badge */}
           <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-slate-50 border border-[#E2E8F0] text-xs font-bold uppercase tracking-wider text-[#0B2240] mb-6 shadow-2xs">
             <Sparkles className="w-3.5 h-3.5 text-[#00B86B]" />
-            <span>Research Advisory Consultation</span>
+            <span>Official Research Desk</span>
           </div>
 
           {/* Approved Heading */}
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-[#0B2240] tracking-tight leading-tight">
-            Ready to Explore Stock Market Research Services?
+            Ready for Structured Intraday Research?
           </h2>
 
           {/* Approved Description */}
           <p className="mt-5 text-sm sm:text-base md:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
-            Connect with Stock Emphasis to learn more about our research services and find the information relevant to your requirements.
+            Fill the form to connect with our SEBI-registered research desk.
           </p>
 
           {/* Trust Badges */}
@@ -45,7 +45,7 @@ export default function FinalCTA() {
             </div>
             <div className="flex items-center gap-1.5 bg-[#F8FAFC] border border-[#E2E8F0] px-3.5 py-1.5 rounded-full font-medium shadow-2xs">
               <CheckCircle2 className="w-4 h-4 text-[#00B86B] shrink-0" />
-              <span>Structured 5-Step Methodology</span>
+              <span>Defined Entry, Target &amp; SL</span>
             </div>
             <div className="flex items-center gap-1.5 bg-[#F8FAFC] border border-[#E2E8F0] px-3.5 py-1.5 rounded-full font-medium shadow-2xs">
               <CheckCircle2 className="w-4 h-4 text-[#00B86B] shrink-0" />

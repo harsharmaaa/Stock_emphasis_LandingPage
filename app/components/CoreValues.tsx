@@ -2,52 +2,51 @@
 
 import React from "react";
 import {
-  Users,
-  RefreshCw,
-  ShieldCheck,
+  Shield,
+  LineChart,
+  Award,
   Microscope,
   Eye,
-  Sparkles,
   Compass,
 } from "lucide-react";
 import { motion } from "framer-motion";
 
 const CORE_VALUES = [
   {
-    icon: Users,
-    title: "Our Customers Are Everything for Us",
+    icon: Shield,
+    title: "Risk-First Mindset",
     description:
-      "Placing client trust, transparent communication, and timely assistance at the core of all research activities.",
+      "Prioritizing capital protection with predefined Stop-Loss levels on every trade setup.",
   },
   {
-    icon: RefreshCw,
-    title: "Evolve and Adapt",
+    icon: LineChart,
+    title: "Data-Backed Precision",
     description:
-      "Continuously updating analytical models to navigate evolving market cycles, volatility trends, and liquidity shifts.",
+      "Adapting technical and open-interest screeners to evolving intraday market cycles.",
   },
   {
-    icon: ShieldCheck,
-    title: "Build for Durability",
+    icon: Award,
+    title: "Quality Over Quantity",
     description:
-      "Prioritizing long-term research consistency and capital protection principles over short-term market speculation.",
+      "Delivering high-conviction setups rather than unnecessary daily market noise.",
   },
   {
     icon: Microscope,
-    title: "In-House Research and Services",
+    title: "In-House Research",
     description:
-      "Generating all technical analysis and trade setups internally through qualified research professionals.",
+      "All market analysis and trade levels generated internally by qualified analysts.",
   },
   {
     icon: Eye,
-    title: "Transparency",
+    title: "SEBI Transparency",
     description:
-      "Operating with open communication, clear risk warnings, and strict conformity with SEBI regulatory disclosures.",
+      "Complete regulatory disclosure with zero guaranteed-return or risk-free claims.",
   },
   {
-    icon: Sparkles,
-    title: "Make a Difference Every Day",
+    icon: Compass,
+    title: "Informed Execution",
     description:
-      "Empowering traders with actionable market perspective to foster disciplined, informed decision-making daily.",
+      "Empowering traders with clear Entry, Target, and SL levels for disciplined decisions.",
   },
 ];
 
@@ -86,7 +85,7 @@ export default function CoreValues() {
           </h2>
 
           <p className="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed">
-            The core ethical and operational values that define Stock Emphasis&apos;s standards of service.
+            Six guiding principles behind our research culture, client transparency, and disciplined execution.
           </p>
         </div>
 

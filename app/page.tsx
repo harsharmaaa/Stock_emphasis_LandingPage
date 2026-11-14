@@ -6,7 +6,6 @@ import AboutSection from "./components/AboutSection";
 import InteractiveServicesShowcase from "./components/InteractiveServicesShowcase";
 import OurMethodology from "./components/OurMethodology";
 import WhyChooseUs from "./components/WhyChooseUs";
-import CoreValues from "./components/CoreValues";
 import FAQSection from "./components/FAQSection";
 import FinalCTA from "./components/FinalCTA";
 import Footer from "./components/Footer";
@@ -37,13 +36,10 @@ export default function Home() {
           {/* 6. Our Methodology (Official 5-step process) */}
           <OurMethodology />
 
-          {/* 7. Why Choose Stock Emphasis (All 8 official points) */}
+          {/* 7. Why Choose Stock Emphasis (Merged 6-card high-impact section) */}
           <WhyChooseUs />
 
-          {/* 8. Our Core Values (All 6 official values) */}
-          <CoreValues />
-
-          {/* 9. FAQs (Accordion) */}
+          {/* 8. FAQs (Accordion) */}
           <FAQSection />
 
           {/* 10. Final Enquiry CTA */}

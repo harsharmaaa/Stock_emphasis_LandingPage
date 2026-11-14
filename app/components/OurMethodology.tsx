@@ -3,10 +3,9 @@
 import React from "react";
 import {
   FileSearch,
-  CheckCircle2,
-  Compass,
+  Activity,
+  Target,
   Send,
-  HeartHandshake,
   Workflow,
   ArrowRight,
 } from "lucide-react";
@@ -15,43 +14,35 @@ import { motion } from "framer-motion";
 const METHODOLOGY_STEPS = [
   {
     step: "01",
-    name: "Requirement",
+    name: "Screening",
     icon: FileSearch,
-    title: "Client Requirement Understanding",
+    title: "Market Screening",
     description:
-      "Evaluating client trading objectives, capital availability, and preferred market segments (Cash, Futures, or Options) through structured initial counselling.",
+      "Filtering liquid NSE/BSE stocks and index derivatives for high-momentum intraday setups.",
   },
   {
     step: "02",
-    name: "Selection",
-    icon: CheckCircle2,
-    title: "Service Selection & Alignment",
+    name: "Analysis",
+    icon: Activity,
+    title: "Technical & OI Analysis",
     description:
-      "Aligning the client with the most suitable official research service category based on trading horizon and market experience.",
+      "Evaluating price action, volume spikes, Open Interest (OI), and sector strength.",
   },
   {
     step: "03",
-    name: "Planning",
-    icon: Compass,
-    title: "Research Strategy & Planning",
+    name: "Levels",
+    icon: Target,
+    title: "Risk & Level Setup",
     description:
-      "Our research analyst desk prepares data-backed setups using technical screeners, open interest analysis, and calculated risk boundaries.",
+      "Defining exact Entry ranges, Target levels, and strict Stop-Loss boundaries.",
   },
   {
     step: "04",
-    name: "Execution",
+    name: "Dispatch",
     icon: Send,
-    title: "Disciplined Trade Execution",
+    title: "Timely Alert Dispatch",
     description:
-      "Disseminating timely research calls with clear entry range, predefined targets, and mandatory stop-loss parameters via WhatsApp and phone alerts.",
-  },
-  {
-    step: "05",
-    name: "Satisfaction",
-    icon: HeartHandshake,
-    title: "Ongoing Support & Review",
-    description:
-      "Providing dedicated relationship manager assistance, regular trade updates, rebalancing guidance, and long-term research engagement.",
+      "Sending clear research calls via WhatsApp & phone when valid opportunities form.",
   },
 ];
 
@@ -82,7 +73,7 @@ export default function OurMethodology() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-white border border-slate-200 text-[#0B2240] text-xs font-bold uppercase tracking-wider mb-3 shadow-xs">
             <Workflow className="w-3.5 h-3.5 text-[#00B86B]" />
-            <span>Official 5-Step Process</span>
+            <span>Official 4-Step Process</span>
           </div>
 
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#0B2240] tracking-tight">
@@ -90,14 +81,14 @@ export default function OurMethodology() {
           </h2>
 
           <p className="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed">
-            Stock Emphasis follows a structured five-step workflow designed to deliver disciplined, objective, and transparent research guidance.
+            Structured four-step workflow designed for disciplined, objective, and transparent intraday research.
           </p>
         </div>
 
         {/* Timeline Container */}
         <div className="relative">
           {/* Desktop Horizontal Connecting Line (through center of nodes) */}
-          <div className="hidden lg:block absolute top-7 left-[8%] right-[8%] h-[2px] bg-gradient-to-r from-slate-200 via-[#00B86B]/40 to-slate-200 z-0" />
+          <div className="hidden lg:block absolute top-7 left-[10%] right-[10%] h-[2px] bg-gradient-to-r from-slate-200 via-[#00B86B]/40 to-slate-200 z-0" />
 
           {/* Mobile Vertical Connecting Line (through center of nodes) */}
           <div className="lg:hidden absolute left-7 top-7 bottom-7 w-[2px] bg-gradient-to-b from-slate-200 via-[#00B86B]/40 to-slate-200 z-0" />
@@ -108,7 +99,7 @@ export default function OurMethodology() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-40px" }}
-            className="grid grid-cols-1 lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-4 xl:gap-5 relative z-10"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-6 relative z-10"
           >
             {METHODOLOGY_STEPS.map((item, index) => {
               const Icon = item.icon;
@@ -159,7 +150,7 @@ export default function OurMethodology() {
                     </div>
 
                     <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-[10px] font-semibold text-slate-400 uppercase tracking-wider">
-                      <span>Phase {index + 1} of 5</span>
+                      <span>Phase 0{index + 1} of 04</span>
                       <span className="w-1.5 h-1.5 rounded-full bg-[#00B86B]/60" />
                     </div>
                   </div>

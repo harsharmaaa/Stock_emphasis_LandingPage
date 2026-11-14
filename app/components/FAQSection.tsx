@@ -13,32 +13,32 @@ const FAQS: FAQItem[] = [
   {
     question: "What is Stock Emphasis?",
     answer:
-      "Stock Emphasis is an Indian capital market research firm based in Indore, Madhya Pradesh. It operates as a SEBI-registered Research Analyst providing technical analysis, data-driven market insights, and structured research viewpoints across Indian cash equities, futures, and options.",
+      "Stock Emphasis is a SEBI-registered Research Analyst firm (INH000020022) in Indore, delivering disciplined technical research across Indian equities and derivatives.",
   },
   {
     question: "Is Stock Emphasis a SEBI-registered Research Analyst?",
     answer:
-      "Yes. Stock Emphasis is registered with the Securities and Exchange Board of India (SEBI) as a Research Analyst under Registration Number INH000020022. The firm strictly complies with SEBI (Research Analysts) Regulations, 2014.",
+      "Yes. Stock Emphasis is registered with SEBI under Registration Number INH000020022, operating in strict compliance with RA regulations.",
   },
   {
-    question: "What research services does Stock Emphasis provide?",
+    question: "Which segments and indices are covered in intraday research?",
     answer:
-      "Stock Emphasis provides 10 official research services categorized across three main presentation streams: Classic Trades (Classic Cash, Classic Future, Classic Option), Massive Trades (Massive Plus Cash Future, Massive Plus Option Future, Massive Pro Cash Future Option), and Prime Index Trades (Prime Index Option, Prime Index Future, Prime Combo Index Option Index Future, Prime Combo Option).",
+      "Our research covers Nifty, Bank Nifty, Sensex options, liquid stock options, futures, and cash equities across 10 specialized service tiers.",
   },
   {
-    question: "How can I enquire about the services?",
+    question: "What details are included in every research call?",
     answer:
-      "You can submit your enquiry directly through the enquiry form available on this landing page or click 'Enquire Now' to open the consultation popup. An analyst support representative will reach out to understand your trading requirements and explain the research structure.",
+      "Every research alert specifies clear Entry levels, Target prices, and a mandatory Stop-Loss boundary alongside the technical rationale.",
   },
   {
-    question: "Does Stock Emphasis guarantee returns?",
+    question: "How many calls are shared per day?",
     answer:
-      "No. Investments in the securities market are subject to market risks. In strict compliance with SEBI guidelines, Stock Emphasis does not offer assured, guaranteed, or profit-sharing returns. All trading setups are provided with defined stop-loss and target parameters to help participants maintain risk discipline.",
+      "We share alerts strictly when high-probability setups emerge from our screening criteria, prioritizing research quality over daily quotas.",
   },
   {
-    question: "How can I contact Stock Emphasis?",
+    question: "Does SEBI registration or research guarantee returns?",
     answer:
-      "You can contact Stock Emphasis via email at support@stockemphasis.com or by telephone at +91 8349046664 during business hours. The registered office is located at 25 FA, Scheme No. 94, Sector F, 201–202, Lakeview 1, Indore, M.P.",
+      "No. All investments in securities carry market risks. SEBI registration validates regulatory compliance but does not assure profits or eliminate risk.",
   },
 ];
 
@@ -60,11 +60,11 @@ export default function FAQSection() {
           </div>
 
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#0B2240] tracking-tight">
-            Clear Answers, Factual Guidance
+            Frequently Asked Questions
           </h2>
 
           <p className="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed">
-            Essential facts regarding Stock Emphasis&apos;s SEBI registration, research practices, and enquiry procedure.
+            Key facts regarding our SEBI registration, research coverage, and alert delivery.
           </p>
         </div>
 

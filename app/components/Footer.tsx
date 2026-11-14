@@ -169,13 +169,31 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Copyright */}
+        {/* Copyright & Regulatory Portals */}
         <div className="pt-4 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-3">
           <p>© 2026 Stock Emphasis. All rights reserved.</p>
-          <div className="flex items-center gap-3 text-[11px]">
+          <div className="flex flex-wrap items-center justify-center sm:justify-end gap-3 text-[11px]">
             <span>SEBI Reg. No. INH000020022</span>
             <span>•</span>
-            <span>Research Desk: Indore, M.P.</span>
+            <a
+              href="https://scores.sebi.gov.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-300 hover:text-[#00B86B] underline transition-colors"
+            >
+              SEBI SCORES
+            </a>
+            <span>•</span>
+            <a
+              href="https://smartodr.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-300 hover:text-[#00B86B] underline transition-colors"
+            >
+              SMART ODR Portal
+            </a>
+            <span>•</span>
+            <span>Indore, M.P.</span>
           </div>
         </div>
       </div>

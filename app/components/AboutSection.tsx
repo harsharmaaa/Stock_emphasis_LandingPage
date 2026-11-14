@@ -15,15 +15,11 @@ export default function AboutSection() {
             </div>
 
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#0B2240] tracking-tight leading-tight">
-              A Regulated Research Desk Founded on Disciplined Market Analysis
+              Disciplined Intraday &amp; Derivative Research Desk
             </h2>
 
             <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-              <strong>Stock Emphasis</strong> is a SEBI-registered Research Analyst firm (Registration No. <strong>INH000020022</strong>) operating from Indore, Madhya Pradesh. The firm provides data-driven research, technical analysis, and market insights covering Indian equities and derivatives.
-            </p>
-
-            <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-              Our research focuses on providing clients with clear and structured market viewpoints across Cash, Futures, and Options segments. Every analysis is formulated by evaluating market volume patterns, price action dynamics, and sector strength.
+              Stock Emphasis (SEBI Reg. No. <strong>INH000020022</strong>) is an Indore-based research desk delivering disciplined technical analysis across Cash, Futures, and Index/Stock Options.
             </p>
 
             {/* Client benefits */}
@@ -31,21 +27,21 @@ export default function AboutSection() {
               <div className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-[#00B86B] shrink-0 mt-0.5" />
                 <p className="text-xs sm:text-sm text-slate-700 font-medium">
-                  <strong>Structured Research Viewpoints:</strong> Rigorous evaluation of market conditions before research releases are communicated.
+                  <strong>Focused Setups:</strong> High-probability intraday opportunities in Nifty, Bank Nifty, Sensex &amp; liquid equities.
                 </p>
               </div>
 
               <div className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-[#00B86B] shrink-0 mt-0.5" />
                 <p className="text-xs sm:text-sm text-slate-700 font-medium">
-                  <strong>Zero Custody of Funds:</strong> Clients trade entirely through their personal demat accounts. Stock Emphasis never handles client capital or demat credentials.
+                  <strong>Strict Risk Control:</strong> Every alert includes predefined Entry, Target, and Stop-Loss levels.
                 </p>
               </div>
 
               <div className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-[#00B86B] shrink-0 mt-0.5" />
                 <p className="text-xs sm:text-sm text-slate-700 font-medium">
-                  <strong>Indore Research Presence:</strong>  Shekhar Central, INDORE, MADHYA PRADESH
+                  <strong>Zero Custody:</strong> 100% execution in your personal demat account. No assured return claims.
                 </p>
               </div>
             </div>

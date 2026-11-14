@@ -42,14 +42,13 @@ export const ALL_SERVICES: ServiceDetail[] = [
     category: "Classic Trades",
     badge: "Cash Equities",
     icon: TrendingUp,
-    shortDesc: "In-depth research on liquid NSE/BSE listed equities for short-term and swing market participants.",
+    shortDesc: "Curated intraday research on liquid NSE/BSE equities with disciplined risk parameters.",
     fullDesc:
       "Classic Cash Trade delivers structured research recommendations in the equity cash segment. Recommendations are evaluated through rigorous multi-timeframe price action, sector rotation trends, and balance sheet fundamentals to identify balanced risk-reward setups.",
     features: [
-      "Well-evaluated stock recommendations in liquid NSE/BSE counters",
-      "Comprehensive research rationale behind each trade update",
-      "Disciplined entry, target, and stop-loss guidelines",
-      "Regular tracking and market hours assistance from dedicated desk",
+      "Predefined Entry, Stop Loss & Target parameters",
+      "Price action, volume surge & momentum screening",
+      "High-liquidity NSE/BSE cash counters only",
     ],
     riskNote: "Equity trading involves market price fluctuations. Stop-loss discipline is strictly recommended.",
   },
@@ -59,14 +58,13 @@ export const ALL_SERVICES: ServiceDetail[] = [
     category: "Classic Trades",
     badge: "Derivatives / Futures",
     icon: Activity,
-    shortDesc: "Directional research on liquid stock and index futures supported by open-interest analysis.",
+    shortDesc: "Directional intraday research across liquid stock and index futures counters.",
     fullDesc:
       "Designed for traders participating in derivative contracts. This service provides actionable technical viewpoints by tracking open interest (OI) changes, volume buildups, and breakout confirmation across active future contracts.",
     features: [
-      "Rigorous technical breakout and momentum screening",
-      "Real-time open interest and contract rollover evaluation",
-      "Defined stop-loss boundaries to systematically control risk",
-      "Prompt alert dispatches through WhatsApp & phone updates",
+      "Predefined Entry, Stop Loss & Target levels",
+      "Open Interest (OI) & contract rollover tracking",
+      "Instant alert dispatches via WhatsApp & phone",
     ],
     riskNote: "Futures contracts carry leverage risk. Market volatility can magnify both profits and losses.",
   },
@@ -76,14 +74,13 @@ export const ALL_SERVICES: ServiceDetail[] = [
     category: "Classic Trades",
     badge: "Index & Stock Options",
     icon: Layers,
-    shortDesc: "Calculated option research driven by option Greeks, implied volatility (IV), and strike selection.",
+    shortDesc: "Data-driven strike selection in benchmark index and liquid stock options.",
     fullDesc:
       "Classic Option Trade caters to option traders seeking data-driven strikes in benchmark indices and liquid stock options. Setups are curated using implied volatility analysis, PCR ratios, and immediate support/resistance zones.",
     features: [
-      "Carefully chosen strike prices based on liquidity and Greeks",
-      "Focused intraday and positional option ideas",
-      "Pre-determined risk parameters and target levels",
-      "Direct analyst guidance to address execution queries",
+      "Pre-calculated Entry, Stop Loss & Target levels",
+      "Greeks, PCR ratio & Implied Volatility analysis",
+      "Focused on high-liquidity active option strikes",
     ],
     riskNote: "Option contracts are subject to time decay (theta decay). Capital allocation discipline is essential.",
   },
@@ -95,14 +92,13 @@ export const ALL_SERVICES: ServiceDetail[] = [
     category: "Massive Trades",
     badge: "Cash & Futures Combo",
     icon: Workflow,
-    shortDesc: "Dual-segment research synchronizing cash market momentum with strategic futures exposure.",
+    shortDesc: "Correlated intraday research combining cash momentum with strategic futures exposure.",
     fullDesc:
       "Massive Plus Cash Future Trade is designed for active traders who operate simultaneously across cash equities and derivative futures. It provides correlated trade perspectives to capitalize on institutional volume surges while balancing positional risk.",
     features: [
-      "Cross-market momentum correlation across Cash and Futures",
-      "Higher focus on institutional order flow and volume breakouts",
-      "Specific hedging and position sizing guidelines",
-      "Active updates on trailing stop-losses during market sessions",
+      "Synchronized Entry, SL & Target boundaries",
+      "Volume breakouts & institutional order flow screening",
+      "Active trailing SL guidance during market hours",
     ],
     riskNote: "Dual-segment trading requires active market monitoring and familiarity with derivative leverage.",
   },
@@ -112,14 +108,13 @@ export const ALL_SERVICES: ServiceDetail[] = [
     category: "Massive Trades",
     badge: "Options & Futures Combo",
     icon: GitMerge,
-    shortDesc: "Comprehensive derivative strategy blending directional future trends with option positioning.",
+    shortDesc: "Comprehensive derivative calls blending futures trends with tactical option positioning.",
     fullDesc:
       "Formulated for sophisticated derivative traders. This service combines directional futures momentum with strategic option hedging or directional option buys to navigate trending and high-volatility market phases.",
     features: [
-      "Integrated technical analysis of both futures charts and option chains",
-      "Strategic setups designed for trending and breakout market conditions",
-      "Strict risk-to-reward profiling before recommendation dissemination",
-      "Prompt notifications via relationship manager support desk",
+      "Defined Entry, Stop Loss & Target parameters",
+      "Integrated futures momentum & option chain data",
+      "High-conviction setups for trending sessions",
     ],
     riskNote: "Derivatives are high-risk financial instruments. Trade only with risk capital suited for derivative volatility.",
   },
@@ -129,14 +124,13 @@ export const ALL_SERVICES: ServiceDetail[] = [
     category: "Massive Trades",
     badge: "All-Segment Suite",
     icon: Crown,
-    shortDesc: "All-inclusive research coverage encompassing Cash, Futures, and Options for complete market exposure.",
+    shortDesc: "All-segment research suite covering Cash, Futures, and Options for active participants.",
     fullDesc:
       "Massive Pro Cash Future Option Trade is Stock Emphasis's most expansive multi-segment research package. It provides complete tactical coverage across cash equities, stock/index futures, and options strategies, empowering traders to capitalize on diverse market scenarios.",
     features: [
-      "Full coverage across Cash, Futures, and Options markets",
-      "Adaptive strategy selection based on overall market trend and volatility",
-      "Priority research updates and direct relationship manager coordination",
-      "Regular portfolio rebalancing guidance and post-trade reviews",
+      "Complete Entry, SL & Target for all setups",
+      "Cross-market technical & volatility screening",
+      "Priority research alerts & relationship manager support",
     ],
     riskNote: "Multi-segment strategies require disciplined allocation and adherence to predefined risk limits.",
   },
@@ -148,14 +142,13 @@ export const ALL_SERVICES: ServiceDetail[] = [
     category: "Prime Index Trades",
     badge: "Index Options",
     icon: Crosshair,
-    shortDesc: "Specialized research focused exclusively on high-liquidity benchmark index options (Nifty & Bank Nifty).",
+    shortDesc: "Dedicated intraday research focused strictly on high-liquidity Nifty & Bank Nifty options.",
     fullDesc:
       "Prime Index Option Trade concentrates strictly on major Indian benchmark indices such as Nifty 50 and Bank Nifty. Recommendations are derived from index weightage movements, global cues, open interest distribution, and technical volatility bands.",
     features: [
-      "Dedicated focus on Nifty 50 and Bank Nifty index options",
-      "Analysis of option chain open interest buildups and PCR data",
-      "High liquidity contracts ensuring smooth trade execution",
-      "Timely alert dispatches during volatile trading hours",
+      "Precise Entry, Stop Loss & Target levels",
+      "Index weightage & PCR/OI distribution analysis",
+      "Swift intraday alert dispatches via WhatsApp",
     ],
     riskNote: "Index options experience rapid premium swings during economic events and expiry days.",
   },
@@ -165,14 +158,13 @@ export const ALL_SERVICES: ServiceDetail[] = [
     category: "Prime Index Trades",
     badge: "Index Futures",
     icon: Gauge,
-    shortDesc: "Strategic directional research on benchmark index futures based on trend and institutional flow.",
+    shortDesc: "Directional index futures research in Nifty and Bank Nifty for active traders.",
     fullDesc:
       "Aimed at index traders seeking structured technical calls in Nifty and Bank Nifty future contracts. Analysis incorporates market breadth, banking sector strength, and macroeconomic trigger points.",
     features: [
-      "Clear directional research on benchmark index futures",
-      "Intraday and positional trend-following frameworks",
-      "Clearly articulated stop-loss and profit target bands",
-      "Continual market-hours monitoring by the research desk",
+      "Predefined Entry ranges, Targets & Stop Loss",
+      "Market breadth, sector strength & trend indicators",
+      "Disciplined intraday index trend-following alerts",
     ],
     riskNote: "Index futures involve substantial contract sizes and require strict adherence to stop-loss levels.",
   },
@@ -182,14 +174,13 @@ export const ALL_SERVICES: ServiceDetail[] = [
     category: "Prime Index Trades",
     badge: "Index Combo",
     icon: SlidersHorizontal,
-    shortDesc: "Dual index strategy aligning index futures direction with index option strike positioning.",
+    shortDesc: "Dual-index strategy synchronizing index futures direction with calculated option strikes.",
     fullDesc:
       "This synchronized index package analyzes the broader benchmark trend via index futures while utilizing index options to structure calculated directional or hedged index trades.",
     features: [
-      "Simultaneous evaluation of index futures momentum and option implied volatility",
-      "Balanced approach designed to mitigate directional index swings",
-      "Disciplined trade sizing and risk containment parameters",
-      "Instantaneous trade notification via WhatsApp & call support",
+      "Structured Entry, SL & Target parameters",
+      "Simultaneous futures trend & option IV screening",
+      "Balanced index risk containment and quick alerts",
     ],
     riskNote: "Combined index derivative positions require active management during fast market moves.",
   },
@@ -199,14 +190,13 @@ export const ALL_SERVICES: ServiceDetail[] = [
     category: "Prime Index Trades",
     badge: "Advanced Options",
     icon: Combine,
-    shortDesc: "Multi-leg option setups structured to leverage volatility shifts and index momentum.",
+    shortDesc: "Multi-strike option research designed to capitalize on volatility and index momentum.",
     fullDesc:
       "Prime Combo Option provides advanced option research setups. It evaluates option volatility skews, gamma moves, and key event horizons to suggest calculated option trade structures across liquid indices.",
     features: [
-      "Advanced strike and expiry combination research",
-      "Volatility-modeled setups designed for dynamic market environments",
-      "Well-defined entry, exit, and risk management criteria",
-      "Proactive trade tracking and analyst guidance",
+      "Defined Entry, Target and Stop-Loss levels",
+      "Volatility skew, gamma shifts & event analysis",
+      "High-liquidity index option contracts only",
     ],
     riskNote: "Complex option setups carry specific market and liquidity risks. Thorough risk awareness is advised.",
   },
@@ -245,11 +235,11 @@ export default function InteractiveServicesShowcase() {
           </div>
 
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#0B2240] tracking-tight">
-            Explore All 10 Official Research Services
+            Intraday &amp; Derivative Research Offerings
           </h2>
 
           <p className="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed">
-            Browse our complete spectrum of research services across Cash, Futures, and Options markets. Select a category below to explore individual service details.
+            Explore our 10 official research services across Nifty, Bank Nifty, Sensex Options, Futures, and Cash Equities.
           </p>
         </div>
 
