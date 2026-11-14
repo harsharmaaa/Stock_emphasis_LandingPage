@@ -2,52 +2,62 @@
 
 import React from "react";
 import {
-  Users,
-  RefreshCw,
-  ShieldCheck,
+  Shield,
+  LineChart,
+  Award,
   Microscope,
   Eye,
-  Sparkles,
   Compass,
 } from "lucide-react";
 import { motion } from "framer-motion";
 
 const CORE_VALUES = [
   {
-    icon: Users,
-    title: "Our Customers Are Everything for Us",
-    description:
-      "Placing client trust, transparent communication, and timely assistance at the core of all research activities.",
+    icon: Shield,
+    // title: "Our Customers Are Everything for Us",
+    // description:
+    //   "Placing client trust, transparent communication, and timely assistance at the core of all research activities.",
+    title: "Risk-First Mindset",
+    description: "Prioritizing capital protection through predefined Stop-Loss levels and disciplined risk parameters on every intraday setup."
   },
   {
-    icon: RefreshCw,
-    title: "Evolve and Adapt",
-    description:
-      "Continuously updating analytical models to navigate evolving market cycles, volatility trends, and liquidity shifts.",
+    icon: LineChart,
+    // title: "Evolve and Adapt",
+    // description:
+    //   "Continuously updating analytical models to navigate evolving market cycles, volatility trends, and liquidity shifts.",
+    title: "Data-Backed Precision",
+    description: "Continuously adapting our technical screeners, volume analysis, and open-interest models to align with evolving intraday market cycles."
   },
   {
-    icon: ShieldCheck,
-    title: "Build for Durability",
-    description:
-      "Prioritizing long-term research consistency and capital protection principles over short-term market speculation.",
+    icon: Award,
+    // title: "Build for Durability",
+    // description:
+    //   "Prioritizing long-term research consistency and capital protection principles over short-term market speculation.",
+    title: "Quality Over Quantity",
+    description: "Sharing research setups strictly when high-probability market opportunities emerge—avoiding unnecessary or forced daily calls."
   },
   {
     icon: Microscope,
     title: "In-House Research and Services",
-    description:
-      "Generating all technical analysis and trade setups internally through qualified research professionals.",
+    // description:
+    //   "Generating all technical analysis and trade setups internally through qualified research professionals.",
+    description: "Generating all technical analysis, index setups, and stock research internally through qualified research professionals."
   },
   {
     icon: Eye,
-    title: "Transparency",
-    description:
-      "Operating with open communication, clear risk warnings, and strict conformity with SEBI regulatory disclosures.",
+    // title: "Transparency",
+    // description:
+    //   "Operating with open communication, clear risk warnings, and strict conformity with SEBI regulatory disclosures.",
+    title: "Complete SEBI Transparency",
+    description: "Operating with clear disclosures, realistic market expectations, zero guaranteed-return claims, and strict adherence to SEBI regulations."
   },
   {
-    icon: Sparkles,
-    title: "Make a Difference Every Day",
-    description:
-      "Empowering traders with actionable market perspective to foster disciplined, informed decision-making daily.",
+    icon: Compass,
+    // title: "Make a Difference Every Day",
+    // description:
+    //   "Empowering traders with actionable market perspective to foster disciplined, informed decision-making daily.",
+    title: "Empowered Decision-Making",
+    description: "Equipping active traders with structured market rationale and clear Entry, Target, and Stop-Loss levels to support informed execution."
   },
 ];
 

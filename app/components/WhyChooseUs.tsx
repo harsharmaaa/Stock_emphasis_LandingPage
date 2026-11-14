@@ -3,9 +3,9 @@
 import React from "react";
 import {
   ShieldCheck,
-  MessagesSquare,
+  Layers,
   Timer,
-  HeartHandshake,
+  Filter,
   LineChart,
   Shield,
   UserCheck,
@@ -23,11 +23,13 @@ const WHY_CHOOSE_ITEMS = [
       "Operates under registration number INH000020022 with adherence to ethical research analyst codes of conduct.",
   },
   {
-    icon: MessagesSquare,
-    title: "Free Counselling",
+    icon: Layers,
+    // title: "Free Counselling",
+    title: "Index & Stock Coverage",
     subtitle: "Orientation & Clarification",
-    description:
-      "Complimentary guidance sessions to help market participants understand service models and disciplined execution.",
+    // description:
+    //   "Complimentary guidance sessions to help market participants understand service models and disciplined execution.",
+    description: "Focused intraday research across Nifty, Bank Nifty, Sensex options, and liquid cash/futures counters."
   },
   {
     icon: Timer,
@@ -37,11 +39,13 @@ const WHY_CHOOSE_ITEMS = [
       "Swift alert transmissions via WhatsApp and phone alerts to allow timely response in fast-moving market sessions.",
   },
   {
-    icon: HeartHandshake,
-    title: "Friendly Interactions",
+    icon: Filter,
+    // title: "Friendly Interactions",
+    title: "Opportunity-Based Alerts",
     subtitle: "Courteous Communication",
-    description:
-      "Professional and transparent client engagement, ensuring every market query is addressed with patience and clarity.",
+    // description:
+    //   "Professional and transparent client engagement, ensuring every market query is addressed with patience and clarity.",
+    description: "No forced daily calls—research updates are shared strictly when market setups meet our analytical criteria."
   },
   {
     icon: LineChart,
@@ -52,10 +56,12 @@ const WHY_CHOOSE_ITEMS = [
   },
   {
     icon: Shield,
-    title: "Safe Stock Selection",
+    // title: "Safe Stock Selection",
+    title: "Predefined Risk Parameters",
     subtitle: "Capital Preservation Focus",
-    description:
-      "Focusing on high-liquidity, stable counters and disciplined stop-loss boundaries to mitigate downside market exposure.*",
+    // description:
+    //   "Focusing on high-liquidity, stable counters and disciplined stop-loss boundaries to mitigate downside market exposure.*",
+    description: "Every trade setup comes with a strict Stop Loss and Target level so you know your risk before entering."
   },
   {
     icon: UserCheck,

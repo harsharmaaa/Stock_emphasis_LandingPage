@@ -3,10 +3,10 @@
 import React from "react";
 import {
   FileSearch,
-  CheckCircle2,
+  Activity,
   Compass,
+  Target,
   Send,
-  HeartHandshake,
   Workflow,
   ArrowRight,
 } from "lucide-react";
@@ -19,39 +19,51 @@ const METHODOLOGY_STEPS = [
     icon: FileSearch,
     title: "Client Requirement Understanding",
     description:
-      "Evaluating client trading objectives, capital availability, and preferred market segments (Cash, Futures, or Options) through structured initial counselling.",
+      "Scanning liquid NSE/BSE equities and index derivatives to filter out noise and shortlist high-momentum intraday candidates.",
   },
   {
     step: "02",
     name: "Selection",
-    icon: CheckCircle2,
-    title: "Service Selection & Alignment",
+    icon: Activity,
+    // title: "Service Selection & Alignment",
+    title: "Market Screening",
+    // description:
+    // "Aligning the client with the most suitable official research service category based on trading horizon and market experience.",
     description:
-      "Aligning the client with the most suitable official research service category based on trading horizon and market experience.",
+      "Evaluating volume patterns, open interest (OI), implied volatility (IV), and sector strength within a defined analytical framework."
   },
   {
     step: "03",
     name: "Planning",
     icon: Compass,
-    title: "Research Strategy & Planning",
+    // title: "Research Strategy & Planning",
+    title: "Setup Evaluation",
+    // description:
+    //   "Our research analyst desk prepares data-backed setups using technical screeners, open interest analysis, and calculated risk boundaries.",
     description:
-      "Our research analyst desk prepares data-backed setups using technical screeners, open interest analysis, and calculated risk boundaries.",
+      "Validating technical breakouts and market setups against prevailing broader market conditions before finalizing a view."
   },
   {
     step: "04",
     name: "Execution",
-    icon: Send,
-    title: "Disciplined Trade Execution",
+    icon: Target,
+    // title: "Disciplined Trade Execution",
+    title: "Risk & Level Definition",
+    // description:
+    //   "Disseminating timely research calls with clear entry range, predefined targets, and mandatory stop-loss parameters via WhatsApp and phone alerts.",
     description:
-      "Disseminating timely research calls with clear entry range, predefined targets, and mandatory stop-loss parameters via WhatsApp and phone alerts.",
+      "Setting clear Entry ranges, calculated Target levels, and mandatory Stop-Loss boundaries to manage downside exposure."
   },
   {
     step: "05",
     name: "Satisfaction",
-    icon: HeartHandshake,
-    title: "Ongoing Support & Review",
+    icon: Send,
+    // title: "Ongoing Support & Review",
+    title: "Timely Research Delivery",
+    // description:
+    //   "Providing dedicated relationship manager assistance, regular trade updates, rebalancing guidance, and long-term research engagement.",
     description:
-      "Providing dedicated relationship manager assistance, regular trade updates, rebalancing guidance, and long-term research engagement.",
+      "Disseminating actionable intraday insights via WhatsApp and phone alerts only when a valid trading opportunity is identified."
   },
 ];
 
@@ -118,7 +130,7 @@ export default function OurMethodology() {
                 <motion.div
                   key={item.step}
                   variants={itemVariants}
-                  className="relative flex flex-row items-start gap-4 lg:flex-col lg:items-center group"
+                  className="relative flex flex-row items-start gap-4 lg:flex-col lg:items-center group h-full"
                 >
                   {/* Step Node with Icon & Number Badge */}
                   <div className="relative shrink-0 lg:mb-5">

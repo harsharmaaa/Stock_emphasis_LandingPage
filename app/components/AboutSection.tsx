@@ -31,21 +31,24 @@ export default function AboutSection() {
               <div className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-[#00B86B] shrink-0 mt-0.5" />
                 <p className="text-xs sm:text-sm text-slate-700 font-medium">
-                  <strong>Structured Research Viewpoints:</strong> Rigorous evaluation of market conditions before research releases are communicated.
+                  {/* <strong>Structured Research Viewpoints:</strong> Rigorous evaluation of market conditions before research releases are communicated. */}
+                  <strong>Built for Active Traders: </strong>Ideal for market participants seeking structured intraday setups in Nifty, Bank Nifty, Sensex, and liquid stocks rather than unverified market noise.
                 </p>
               </div>
 
               <div className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-[#00B86B] shrink-0 mt-0.5" />
                 <p className="text-xs sm:text-sm text-slate-700 font-medium">
-                  <strong>Zero Custody of Funds:</strong> Clients trade entirely through their personal demat accounts. Stock Emphasis never handles client capital or demat credentials.
+                  {/* <strong>Zero Custody of Funds:</strong> Clients trade entirely through their personal demat accounts. Stock Emphasis never handles client capital or demat credentials. */}
+                  <strong>Strict Risk Boundaries: </strong> Every research alert includes a predefined Entry range, Target, and Stop Loss to support disciplined risk management.
                 </p>
               </div>
 
               <div className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-[#00B86B] shrink-0 mt-0.5" />
                 <p className="text-xs sm:text-sm text-slate-700 font-medium">
-                  <strong>Indore Research Presence:</strong>  Shekhar Central, INDORE, MADHYA PRADESH
+                  {/* <strong>Indore Research Presence:</strong>  Shekhar Central, INDORE, MADHYA PRADESH */}
+                  <strong>Zero Custody & Realistic Expectations: </strong> 100% execution in your personal demat account. Not meant for those seeking guaranteed returns, risk-free trading, or assured profits.
                 </p>
               </div>
             </div>

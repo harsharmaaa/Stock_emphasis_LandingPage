@@ -245,11 +245,13 @@ export default function InteractiveServicesShowcase() {
           </div>
 
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#0B2240] tracking-tight">
-            Explore All 10 Official Research Services
+            {/* Explore All 10 Official Research Services */}
+            Structured Research Across Stocks, Futures & Options
           </h2>
 
           <p className="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed">
-            Browse our complete spectrum of research services across Cash, Futures, and Options markets. Select a category below to explore individual service details.
+            {/* Browse our complete spectrum of research services across Cash, Futures, and Options markets. Select a category below to explore individual service details. */}
+            Explore our 10 official research categories covering Nifty, Bank Nifty, Sensex options, and liquid NSE/BSE equities—each backed by clear Entry, Stop Loss, and Target levels.
           </p>
         </div>
 
@@ -263,11 +265,10 @@ export default function InteractiveServicesShowcase() {
                   key={cat}
                   type="button"
                   onClick={() => setActiveTab(cat)}
-                  className={`relative px-5 sm:px-7 py-2.5 sm:py-3 rounded-xl text-xs sm:text-sm font-bold transition-colors cursor-pointer whitespace-nowrap z-10 ${
-                    isActive
+                  className={`relative px-5 sm:px-7 py-2.5 sm:py-3 rounded-xl text-xs sm:text-sm font-bold transition-colors cursor-pointer whitespace-nowrap z-10 ${isActive
                       ? "text-white"
                       : "text-slate-600 hover:text-[#0B2240]"
-                  }`}
+                    }`}
                 >
                   {isActive && (
                     <motion.div
