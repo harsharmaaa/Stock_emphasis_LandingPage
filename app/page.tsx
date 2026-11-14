@@ -1,3 +1,4 @@
+import Script from "next/script";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import TrustStrip from "./components/TrustStrip";
@@ -54,6 +55,20 @@ export default function Home() {
 
         {/* Automatic 1.5s Registration Popup */}
         <LeadModal />
+
+        {/* Google Ads Tag */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17963625672"
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads-tag" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-17963625672');
+          `}
+        </Script>
       </div>
     </ModalProvider>
   );

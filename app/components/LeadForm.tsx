@@ -3,6 +3,16 @@
 import React, { useState } from "react";
 import { Loader2, CheckCircle2, AlertCircle, ShieldCheck, ArrowRight } from "lucide-react";
 
+declare global {
+  interface Window {
+    gtag?: (
+      command: string,
+      action: string,
+      params?: Record<string, string | number | boolean>
+    ) => void;
+  }
+}
+
 export const OFFICIAL_SERVICES = [
   "Classic Cash Trade",
   "Classic Future Trade",
@@ -129,6 +139,9 @@ export default function LeadForm({
       const data = await response.json();
 
       if (response.ok && data.success) {
+        window.gtag?.("event", "conversion", {
+          send_to: "AW-17963625672/Y7C_CJGUnLgdEMjZ3PVC",
+        });
         setSubmitSuccess(true);
         if (onSuccess) {
           onSuccess();
