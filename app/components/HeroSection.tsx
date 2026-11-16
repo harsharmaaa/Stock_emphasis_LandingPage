@@ -33,20 +33,15 @@ export default function HeroSection() {
 
               {/* Main Heading */}
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[50px] font-black tracking-tight leading-[1.15] text-[#0B2240]">
-                Intraday Research for  {" "}
+                Intraday Research for{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0B2240] via-[#103E70] to-[#00B86B]">
                   Active Market Participants
                 </span>
               </h1>
 
               {/* Sub-headline */}
-              <p className="text-base sm:text-lg font-bold text-[#0B2240] tracking-wide">
-                Structured Intraday Research for Nifty | Bank Nifty | Sensex | Liquid Stocks
-              </p>
-
-              {/* Short Description */}
-              <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl">
-                Get research-backed intraday setups across Cash, Futures &amp; Options with clearly defined Entry, Stop Loss, and Target levels.
+              <p className="text-base sm:text-lg md:text-xl font-medium text-slate-700 leading-relaxed max-w-2xl">
+                Get structured intraday setups across Cash, Futures &amp; Options with clear Entry, Target &amp; Stop Loss levels.
               </p>
 
               {/* Trust Indicators */}
@@ -96,14 +91,14 @@ export default function HeroSection() {
             </div>
 
             {/* Desktop Research Desk Image — flex-grow to align exactly with form card bottom edge */}
-            <div className="hidden lg:flex relative flex-1 min-h-[220px] w-full rounded-2xl md:rounded-3xl border border-[#E2E8F0] shadow-xl overflow-hidden mt-6 bg-[#F8FAFC]">
+            <div className="hidden lg:flex relative flex-1 min-h-[260px] xl:min-h-[300px] w-full rounded-2xl md:rounded-3xl border border-[#E2E8F0] shadow-xl overflow-hidden mt-6 bg-[#F8FAFC]">
               <Image
-                src="/images/hero-research-desk.jpg"
-                alt="Dual-monitor trading desk displaying technical analysis charts and market setups"
+                src="/images/hero-analysts-meeting.jpg"
+                alt="Stock Emphasis research analysts collaborating on market analysis and chart setups"
                 fill
                 priority
                 sizes="(min-width: 1024px) 50vw, 100vw"
-                className="object-cover object-center"
+                className="object-cover object-top"
               />
 
               {/* Caption badge: bottom-right corner, 12px from edges */}
@@ -116,34 +111,43 @@ export default function HeroSection() {
 
           {/* Right Column — Enquiry Form Card */}
           <div className="lg:col-span-5 flex flex-col">
-            <div className="bg-white rounded-2xl md:rounded-3xl p-6 sm:p-8 shadow-xl border border-[#E2E8F0] text-slate-900 relative">
-              {/* Form Card Header */}
-              <div className="mb-6">
-                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F8FAFC] border border-[#E2E8F0] text-[#00B86B] text-[11px] font-bold uppercase tracking-wider mb-2.5">
-                  <Sparkles className="w-3 h-3" />
-                  <span>Enquiry Desk</span>
+            <div className="bg-white rounded-2xl md:rounded-3xl p-6 sm:p-7 md:p-8 shadow-xl border border-[#E2E8F0] text-slate-900 relative">
+              {/* Form Card Header matching Modal */}
+              <div className="mb-4 sm:mb-5">
+                <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-[#00B86B] text-[10px] sm:text-[11px] font-bold uppercase tracking-wider mb-2">
+                  <Sparkles className="w-3 h-3 text-[#00B86B]" />
+                  <span>Research Guidance Desk</span>
                 </div>
-                <h3 className="text-xl sm:text-2xl font-black text-[#0B2240] tracking-tight">
-                  Enquire for Research Guidance
+                <h3 className="text-xl sm:text-2xl font-black text-[#0B2240] tracking-tight leading-snug">
+                  Enquire for Intraday Research
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-600 mt-1">
-                  Connect with our research team to learn more about our official services.
+                  Connect with our SEBI-registered desk for structured market setups.
                 </p>
               </div>
 
-              {/* The Functional Lead Form */}
+              {/* The Full Lead Form (Name, Mobile, Interested Service, Trading Capital) */}
               <LeadForm
                 buttonText="Submit Enquiry"
                 source="hero"
                 formIdPrefix="hero-card"
               />
+
+              {/* Footer regulatory badge */}
+              <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] sm:text-xs text-slate-500">
+                <span className="flex items-center gap-1">
+                  <ShieldCheck className="w-3.5 h-3.5 text-[#00B86B]" />
+                  SEBI Reg: INH000020022
+                </span>
+                <span>Registered Analyst Desk Indore</span>
+              </div>
             </div>
 
             {/* Mobile Research Desk Image — shown below the form on screens < lg */}
-            <div className="mt-8 lg:hidden relative w-full h-[180px] sm:h-[220px] rounded-2xl md:rounded-3xl border border-[#E2E8F0] shadow-xl overflow-hidden bg-[#F8FAFC]">
+            <div className="mt-8 lg:hidden relative w-full aspect-[16/10] sm:aspect-[16/9] min-h-[200px] max-h-[320px] rounded-2xl md:rounded-3xl border border-[#E2E8F0] shadow-xl overflow-hidden bg-[#F8FAFC]">
               <Image
-                src="/images/hero-research-desk.jpg"
-                alt="Dual-monitor trading desk displaying technical analysis charts and market setups"
+                src="/images/hero-analysts-meeting.jpg"
+                alt="Stock Emphasis research analysts collaborating on market analysis and chart setups"
                 fill
                 priority
                 sizes="100vw"

@@ -8,6 +8,7 @@ import {
   Clock,
   AlertTriangle,
   Building2,
+  ExternalLink,
 } from "lucide-react";
 
 export default function Footer() {
@@ -19,7 +20,7 @@ export default function Footer() {
           {/* Column 1: Brand Authority, Mission & SEBI Registration (7 cols) */}
           <div className="lg:col-span-7 space-y-6">
             <div className="flex flex-col items-start gap-3">
-              {/* Official Logo in subtle light container for contrast against dark navy */}
+              {/* Official Logo */}
               <div className="inline-flex bg-white px-4 py-2.5 rounded-xl shadow-xs border border-white/20 items-center justify-center">
                 <Image
                   src="/images/stock-emphasis-logo.webp"
@@ -30,10 +31,10 @@ export default function Footer() {
                 />
               </div>
               <p className="text-sm font-semibold text-slate-200 tracking-tight">
-                Your Reliable Stock Market Research Partner
+                Stock Emphasis — SEBI Registered Research Analyst
               </p>
               <p className="text-xs sm:text-sm text-slate-400 leading-relaxed max-w-xl">
-                Stock Emphasis is an independent, SEBI-registered Research Analyst firm operating from Indore, Madhya Pradesh. We deliver structured technical analysis, volume momentum screeners, and disciplined market viewpoints across Indian equities and derivative segments.
+                Stock Emphasis is an independent, SEBI-registered Research Analyst desk operating from Indore, Madhya Pradesh. We deliver structured technical research, volume momentum screeners, and disciplined market setups across Cash, Futures &amp; Options.
               </p>
             </div>
 
@@ -55,13 +56,13 @@ export default function Footer() {
               <div className="p-4 rounded-xl bg-white/5 border border-white/10 text-xs space-y-2">
                 <div className="flex items-center gap-2 text-emerald-400 font-bold">
                   <Building2 className="w-4 h-4 text-[#00B86B]" />
-                  <span>Research Governance</span>
+                  <span>Exchange &amp; Governance</span>
                 </div>
                 <p className="text-slate-200">
-                  <strong className="text-white">Advisory Discipline:</strong> Zero custody of client funds or trading credentials.
+                  <strong className="text-white">BSE Enlistment:</strong> Enlisted Research Analyst Desk
                 </p>
                 <p className="text-slate-400 leading-normal">
-                  100% trades executed in clients&apos; personal demat accounts.
+                  Zero custody of funds. 100% trades executed in clients&apos; own demat accounts.
                 </p>
               </div>
             </div>
@@ -73,7 +74,7 @@ export default function Footer() {
               <div className="flex items-center justify-between gap-3 border-b border-white/10 pb-4">
                 <h4 className="text-sm font-bold text-white uppercase tracking-wider flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-[#00B86B]" />
-                  <span>Official Contact Desk</span>
+                  <span>Official Registered Office</span>
                 </h4>
                 <span className="text-[11px] font-semibold text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded-full border border-emerald-500/20">
                   Indore HQ
@@ -88,9 +89,9 @@ export default function Footer() {
                   </div>
                   <div>
                     <span className="block text-[11px] uppercase tracking-wider font-bold text-slate-400 mb-0.5">
-                      Registered Office
+                      Registered Address
                     </span>
-                    <span className="leading-relaxed text-slate-200">
+                    <span className="leading-relaxed text-slate-200 font-medium">
                       404, 4th Floor, Shekhar Central, INDORE, MADHYA PRADESH, 452001
                     </span>
                   </div>
@@ -103,7 +104,7 @@ export default function Footer() {
                   </div>
                   <div>
                     <span className="block text-[11px] uppercase tracking-wider font-bold text-slate-400 mb-0.5">
-                      Telephone
+                      Support Desk
                     </span>
                     <a
                       href="tel:+918349046664"
@@ -121,7 +122,7 @@ export default function Footer() {
                   </div>
                   <div>
                     <span className="block text-[11px] uppercase tracking-wider font-bold text-slate-400 mb-0.5">
-                      Email Support
+                      Compliance &amp; Support Email
                     </span>
                     <a
                       href="mailto:support@stockemphasis.com"
@@ -139,7 +140,7 @@ export default function Footer() {
                   </div>
                   <div>
                     <span className="block text-[11px] uppercase tracking-wider font-bold text-slate-400 mb-0.5">
-                      Business Hours
+                      Trading Desk Hours
                     </span>
                     <span className="text-slate-300">
                       Monday – Friday: 9:00 AM – 5:30 PM IST
@@ -160,40 +161,53 @@ export default function Footer() {
                 Mandatory Regulatory Disclosure &amp; Market Risk Disclaimer
               </h5>
               <p className="text-slate-100 font-semibold text-xs sm:text-sm">
-                &ldquo;Investments in securities market are subject to market risks. Read all related documents carefully before investing. SEBI registration does not guarantee performance or returns. No assured or guaranteed returns are offered.&rdquo;
+                &ldquo;Investments in securities are subject to market risks. Read all related documents carefully before investing. SEBI registration does not guarantee performance or returns. No assured or guaranteed returns are offered.&rdquo;
               </p>
               <p className="text-slate-400">
-                Stock Emphasis operates in strict conformity with SEBI (Research Analysts) Regulations, 2014. Stock market trading and derivative instruments carry financial risk. Recommendations provided are solely for educational and research purposes based on technical and fundamental analysis methodologies. Investors are advised to exercise discretion and evaluate their risk appetite before acting on any research reports or alerts.
+                Stock Emphasis operates in strict conformity with SEBI (Research Analysts) Regulations, 2014 (Registration No. INH000020022). Stock market trading and derivative instruments carry significant financial risk. Recommendations provided are solely for research and analytical guidance based on technical frameworks. Active market participants should assess their individual risk tolerance before acting upon any research call.
               </p>
             </div>
           </div>
         </div>
 
-        {/* Copyright & Regulatory Portals */}
-        <div className="pt-4 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-3">
-          <p>© 2026 Stock Emphasis. All rights reserved.</p>
+        {/* Official Dispute & Grievance Links Strip */}
+        <div className="p-4 rounded-xl bg-white/5 border border-white/10 mb-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+          <div className="flex items-center gap-2 text-slate-300">
+            <Shield className="w-4 h-4 text-[#00B86B] shrink-0" />
+            <span>Investor Grievance &amp; Redressal Portals:</span>
+          </div>
+          <div className="flex flex-wrap items-center gap-4 text-xs font-semibold">
+            <a
+              href="https://scores.sebi.gov.in/scores-home"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-emerald-400 hover:text-emerald-300 underline underline-offset-4 transition-colors"
+            >
+              <span>SEBI SCORES Portal</span>
+              <ExternalLink className="w-3.5 h-3.5" />
+            </a>
+            <span className="text-slate-600">•</span>
+            <a
+              href="https://smartodr.in/login"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-emerald-400 hover:text-emerald-300 underline underline-offset-4 transition-colors"
+            >
+              <span>SMART ODR Portal</span>
+              <ExternalLink className="w-3.5 h-3.5" />
+            </a>
+          </div>
+        </div>
+
+        {/* Copyright & Bottom Metadata */}
+        <div className="pt-4 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-3 border-t border-slate-800">
+          <p>Copyright © 2026 Stock Emphasis. All rights reserved.</p>
           <div className="flex flex-wrap items-center justify-center sm:justify-end gap-3 text-[11px]">
             <span>SEBI Reg. No. INH000020022</span>
             <span>•</span>
-            <a
-              href="https://scores.sebi.gov.in"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-slate-300 hover:text-[#00B86B] underline transition-colors"
-            >
-              SEBI SCORES
-            </a>
+            <span>BSE Enlisted RA</span>
             <span>•</span>
-            <a
-              href="https://smartodr.in"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-slate-300 hover:text-[#00B86B] underline transition-colors"
-            >
-              SMART ODR Portal
-            </a>
-            <span>•</span>
-            <span>Indore, M.P.</span>
+            <span>Shekhar Central, Indore, M.P.</span>
           </div>
         </div>
       </div>
