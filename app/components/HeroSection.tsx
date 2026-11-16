@@ -33,9 +33,9 @@ export default function HeroSection() {
 
               {/* Main Heading */}
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[50px] font-black tracking-tight leading-[1.15] text-[#0B2240]">
-                Your Reliable Stock {" "}
+                Intraday Research for  {" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0B2240] via-[#103E70] to-[#00B86B]">
-                  Market Research Partner
+                  Active Market Participants
                 </span>
               </h1>
 
