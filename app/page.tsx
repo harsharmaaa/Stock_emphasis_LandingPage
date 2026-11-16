@@ -2,12 +2,7 @@ import Script from "next/script";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import TrustStrip from "./components/TrustStrip";
-import AboutSection from "./components/AboutSection";
-import InteractiveServicesShowcase from "./components/InteractiveServicesShowcase";
-import OurMethodology from "./components/OurMethodology";
 import WhyChooseUs from "./components/WhyChooseUs";
-import FAQSection from "./components/FAQSection";
-import FinalCTA from "./components/FinalCTA";
 import Footer from "./components/Footer";
 import LeadModal from "./components/LeadModal";
 import { ModalProvider } from "./context/ModalContext";
@@ -16,43 +11,28 @@ export default function Home() {
   return (
     <ModalProvider>
       <div className="min-h-screen bg-white text-slate-900 flex flex-col font-sans selection:bg-[#00B86B] selection:text-white">
-        {/* 1. Navbar */}
+        {/* Navigation Bar */}
         <Navbar />
 
-        {/* Main Content Area in Order */}
+        {/* 4 Concise Core Sections */}
         <main className="flex-1">
-          {/* 2. Hero Section with Enquiry Form */}
+          {/* Section 1: Hero Section (Above the Fold) with Embedded Quick Lead Form */}
           <HeroSection />
 
-          {/* 3. Trust Strip */}
+          {/* Section 2: Trust & Highlights Strip (4 Clean Badges) */}
           <TrustStrip />
 
-          {/* 4. About Stock Emphasis */}
-          <AboutSection />
-
-          {/* 5. Interactive Services Showcase (All 10 services) */}
-          <InteractiveServicesShowcase />
-
-          {/* 6. Our Methodology (Official 5-step process) */}
-          <OurMethodology />
-
-          {/* 7. Why Choose Stock Emphasis (Merged 6-card high-impact section) */}
+          {/* Section 3: Why Subscribe to Stock Emphasis? (4 Core Minimalist Cards) */}
           <WhyChooseUs />
-
-          {/* 8. FAQs (Accordion) */}
-          <FAQSection />
-
-          {/* 10. Final Enquiry CTA */}
-          <FinalCTA />
         </main>
 
-        {/* 11. Footer and Regulatory Compliance */}
+        {/* Section 4: Mandatory SEBI Disclaimers & Professional Corporate Footer */}
         <Footer />
 
-        {/* Automatic 1.5s Registration Popup */}
+        {/* Dynamic Enquiry Popup Modal */}
         <LeadModal />
 
-        {/* Google Ads Tag */}
+        {/* Google Ads Tag Tracking */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-17963625672"
           strategy="afterInteractive"

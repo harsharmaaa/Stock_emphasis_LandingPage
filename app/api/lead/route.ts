@@ -6,7 +6,14 @@ interface LeadPayload {
   service?: string;
   segment?: string;
   capital?: string;
+  source?: string;
+  company_website?: string;
+  time_taken?: number;
 }
+
+// In-memory cache for recent submissions (mobile -> timestamp)
+const recentSubmissions = new Map<string, number>();
+const TEN_MINUTES_MS = 10 * 60 * 1000;
 
 export const OFFICIAL_SERVICES = [
   "Classic Cash Trade",
@@ -24,6 +31,7 @@ export const OFFICIAL_SERVICES = [
 // Keep legacy segments valid for full backwards compatibility
 const ALL_VALID_SERVICES = [
   ...OFFICIAL_SERVICES,
+  "Intraday Research",
   "Equity Cash",
   "Futures & Options",
   "Index Options",
@@ -56,10 +64,26 @@ export async function POST(request: Request) {
       );
     }
 
-    const { name, mobile, service, segment, capital } = body;
-    const selectedService = (service || segment || "").trim();
+    const { name, mobile, service, segment, capital, company_website, time_taken } = body;
+    const selectedService = (service || segment || "Intraday Research").trim();
 
-    // Server-side validation
+    // 1. Silent Honeypot & Anti-Bot Fast Submit Protection
+    // If company_website is filled or form submitted under 2.5 seconds (2500ms),
+    // return HTTP 200 silently without forwarding to webhook.
+    const isHoneypotFilled = Boolean(company_website && company_website.trim().length > 0);
+    const isSubmittedTooFast = typeof time_taken === "number" && time_taken < 2500;
+
+    if (isHoneypotFilled || isSubmittedTooFast) {
+      return NextResponse.json(
+        {
+          success: true,
+          message: "Thank you for your enquiry! Our team will contact you shortly.",
+        },
+        { status: 200 }
+      );
+    }
+
+    // 2. Server-side validation
     const trimmedName = name?.trim();
     if (!trimmedName || trimmedName.length < 2) {
       return NextResponse.json(
@@ -97,9 +121,38 @@ export async function POST(request: Request) {
       );
     }
 
+    // 3. Server-Side Duplicate Cache (10-minute cooldown per mobile number)
+    const nowMs = Date.now();
+    const lastSubmitted = recentSubmissions.get(trimmedMobile);
+
+    // Prune entries older than 10 minutes periodically
+    if (recentSubmissions.size > 1000) {
+      for (const [m, t] of recentSubmissions.entries()) {
+        if (nowMs - t > TEN_MINUTES_MS) {
+          recentSubmissions.delete(m);
+        }
+      }
+    }
+
+    if (lastSubmitted && nowMs - lastSubmitted < TEN_MINUTES_MS) {
+      // Within 10 minutes: return HTTP 200 success without forwarding to MAKE_WEBHOOK_URL
+      return NextResponse.json(
+        {
+          success: true,
+          message: "Your request was just received! Our team will call you shortly.",
+          duplicate: true,
+        },
+        { status: 200 }
+      );
+    }
+
+    // Record submission timestamp in server cache
+    recentSubmissions.set(trimmedMobile, nowMs);
+
     // Check environment variable
     const webhookUrl = process.env.MAKE_WEBHOOK_URL;
     if (!webhookUrl || webhookUrl.trim() === "") {
+      recentSubmissions.delete(trimmedMobile);
       return NextResponse.json(
         {
           success: false,
@@ -148,6 +201,7 @@ export async function POST(request: Request) {
     });
 
     if (!webhookResponse.ok) {
+      recentSubmissions.delete(trimmedMobile);
       const errorText = await webhookResponse.text().catch(() => "Unknown error");
       return NextResponse.json(
         {
