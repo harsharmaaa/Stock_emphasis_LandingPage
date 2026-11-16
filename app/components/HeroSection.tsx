@@ -98,12 +98,12 @@ export default function HeroSection() {
             {/* Desktop Research Desk Image — flex-grow to align exactly with form card bottom edge */}
             <div className="hidden lg:flex relative flex-1 min-h-[220px] w-full rounded-2xl md:rounded-3xl border border-[#E2E8F0] shadow-xl overflow-hidden mt-6 bg-[#F8FAFC]">
               <Image
-                src="/images/hero-research-desk.png"
-                alt="Research and analytics desk with a financial dashboard on a curved monitor"
+                src="/images/hero-research-desk.jpg"
+                alt="Dual-monitor trading desk displaying technical analysis charts and market setups"
                 fill
                 priority
                 sizes="(min-width: 1024px) 50vw, 100vw"
-                className="object-cover object-[center_45%]"
+                className="object-cover object-center"
               />
 
               {/* Caption badge: bottom-right corner, 12px from edges */}
@@ -140,14 +140,14 @@ export default function HeroSection() {
             </div>
 
             {/* Mobile Research Desk Image — shown below the form on screens < lg */}
-            <div className="mt-8 lg:hidden relative w-full h-[180px] rounded-2xl md:rounded-3xl border border-[#E2E8F0] shadow-xl overflow-hidden bg-[#F8FAFC]">
+            <div className="mt-8 lg:hidden relative w-full h-[180px] sm:h-[220px] rounded-2xl md:rounded-3xl border border-[#E2E8F0] shadow-xl overflow-hidden bg-[#F8FAFC]">
               <Image
-                src="/images/hero-research-desk.png"
-                alt="Research and analytics desk with a financial dashboard on a curved monitor"
+                src="/images/hero-research-desk.jpg"
+                alt="Dual-monitor trading desk displaying technical analysis charts and market setups"
                 fill
                 priority
                 sizes="100vw"
-                className="object-cover object-[center_45%]"
+                className="object-cover object-center"
               />
 
               {/* Caption badge: bottom-right corner, 12px from edges */}

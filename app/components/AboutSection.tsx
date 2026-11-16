@@ -55,12 +55,12 @@ export default function AboutSection() {
             {/* Image container: rounded-2xl, 1px border #E2E8F0, soft shadow, overflow-hidden, no dark overlay */}
             <div className="relative w-full aspect-[4/3] rounded-2xl border border-[#E2E8F0] shadow-xl overflow-hidden bg-[#F8FAFC]">
               <Image
-                src="/images/about-research-team.png"
-                alt="Research analysts reviewing market charts and reports in a modern office"
+                src="/images/about-research-team.jpg"
+                alt="Research analyst team collaborating around trading monitors and reviewing market chart setups"
                 fill
                 loading="lazy"
                 sizes="(min-width: 1024px) 45vw, 100vw"
-                className="object-cover object-[center_top]"
+                className="object-cover object-center"
               />
 
               {/* Floating badge at the bottom-left of the image */}
