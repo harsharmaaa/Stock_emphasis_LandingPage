@@ -33,15 +33,15 @@ export default function HeroSection() {
 
               {/* Main Heading */}
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[50px] font-black tracking-tight leading-[1.15] text-[#0B2240]">
-                Intraday Research for{" "}
+                Your Reliable Stock {" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0B2240] via-[#103E70] to-[#00B86B]">
-                  Active Market Participants
+                  Market Research Partner
                 </span>
               </h1>
 
               {/* Sub-headline */}
               <p className="text-base sm:text-lg font-bold text-[#0B2240] tracking-wide">
-                Structured Research Calls for Nifty, Bank Nifty, Sensex &amp; Liquid Stocks
+                Structured Intraday Research for Nifty | Bank Nifty | Sensex | Liquid Stocks
               </p>
 
               {/* Short Description */}

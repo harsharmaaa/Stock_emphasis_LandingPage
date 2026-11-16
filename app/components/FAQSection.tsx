@@ -56,7 +56,7 @@ export default function FAQSection() {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-white border border-slate-200 text-[#0B2240] text-xs font-bold uppercase tracking-wider mb-3 shadow-xs">
             <HelpCircle className="w-3.5 h-3.5 text-[#00B86B]" />
-            <span>Frequently Asked Questions</span>
+            <span>Common Queries</span>
           </div>
 
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#0B2240] tracking-tight">
@@ -78,11 +78,10 @@ export default function FAQSection() {
             return (
               <div
                 key={index}
-                className={`rounded-2xl border bg-white overflow-hidden transition-all duration-200 shadow-xs ${
-                  isOpen
+                className={`rounded-2xl border bg-white overflow-hidden transition-all duration-200 shadow-xs ${isOpen
                     ? "border-[#00B86B]/40 shadow-md ring-1 ring-[#00B86B]/20"
                     : "border-slate-200 hover:border-slate-300 hover:shadow-sm"
-                }`}
+                  }`}
               >
                 <button
                   type="button"
@@ -101,11 +100,10 @@ export default function FAQSection() {
 
                   {/* Subtle plus/minus icon pill */}
                   <div
-                    className={`w-8 h-8 rounded-xl border flex items-center justify-center shrink-0 transition-all duration-200 ${
-                      isOpen
+                    className={`w-8 h-8 rounded-xl border flex items-center justify-center shrink-0 transition-all duration-200 ${isOpen
                         ? "bg-emerald-50 border-emerald-300 text-[#00B86B] shadow-2xs"
                         : "bg-slate-50 border-slate-200 text-slate-500 group-hover:border-[#00B86B]/40 group-hover:text-[#00B86B]"
-                    }`}
+                      }`}
                   >
                     {isOpen ? (
                       <Minus className="w-4 h-4 stroke-[2.2]" />
